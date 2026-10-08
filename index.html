@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="para">Lorem ipsum dolor sit amet.</p>
+    <h1 class="heading1"> This is Heading one defined in HTML</h1>
+    <h2>This is heading2 from HTML</h2>
+    <script>
+        let para1 = document.getElementById("para");
+        para1.innerHTML = "This is our updated message";
+        para1.style.color = "red";
+        let heading = document.getElementsByClassName("heading1");
+        heading[0].innerHTML = "Updated from JS";
+        heading[0].style.color = "green";
+        let head2 = document.getElementsByTagName("h2");
+        head2[0].innerHTML = "Updated by JS";
+        head2[0].style.color = "blue";
+    </script> -->
+
+    <!-- <h2 id="heading2"> This is heading 2</h2>
+    <h1 class="h1-cls">This is heading 1(a)</h1>
+    <h1 class="h1-cls">This is heading 1(b)</h1>
+    <p>Click button to change the text</p>
+    <button id="btn">Click Me</button>
+    <script>
+        const head2 = document.querySelector("#heading2");
+        head2.innerHTML = "Changed by JS";
+        const head1 = document.querySelectorAll(".h1-cls");
+        head1[0].innerHTML = "Apna Name";
+        head1[1].innerHTML = "This one is also changed";
+        const para = document.querySelector("p");
+        const button = document.querySelector("#btn");
+        button.addEventListener('click',()=>
+        {para.innerHTML = "Successfully Changed";});
+    </script> -->
+<!-- <form>  
+<input type="button" onclick="clickevent()" value="Which class is this?"/> 
+<p onmouseover="mouseoverevent()"> Keep cursor over me</p>   
+</form>  
+    <script>  
+    function clickevent()  
+    {  
+        document.write("This is Tech - 3C class");  
+    }  
+     function mouseoverevent()  
+    {  
+        alert("This is our Tech Class");  
+    }  
+</script>   -->
+
+<!-- <p>Working of addEventListener</p>
+<p>Click the button</p>
+<button id="btn">Click Me</button>
+<p id="para">___________</p>
+<script>
+    document.getElementById("btn").addEventListener("click",function display(){
+     document.getElementById("para").innerHTML = "Successfully Changed";
+    });
+</script> -->
+
+<!-- <p>Working with multiple addEventListener</p>
+<p>Click the button</p>
+<button id="btn">Click Me</button>
+<p id="para1">___________</p>
+<p id="para2">___________</p>
+<p id="para3">___________</p>
+<script>
+const button = document.getElementById("btn");
+function display1(){
+    document.getElementById("para1").innerHTML = "This is Para First";
+}
+function display2(){
+    document.getElementById("para2").innerHTML = "This is Para Second";
+}
+function display3(){
+    document.getElementById("para3").innerHTML = "This is Para Third";
+}
+button.addEventListener("click",display1);
+button.addEventListener("click",display2);
+button.addEventListener("click",display3);
+</script> -->
+
+<!-- <div id="parent">
+    Parent Content
+       <button id="child">Click Me</button>
+</div>
+<script>
+   const outer = document.getElementById("parent");
+   const inner = document.getElementById("child");
+   console.log(outer);
+   console.log(inner);
+   parent.addEventListener("click",()=>{
+    
+   });
+   child.addEventListener("click",function (){
+    
+   });
+</script> -->
+
+<!-- <div>
+    <h2>Registration Form</h2>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="sname">
+        <p id="para"></p>
+        <input type="button" id="btn" value="Click me">
+    </div>
+    <script>
+       const name = "Raghav"
+       const n = document.getElementById("para");
+       const btn = document.getElementById("btn");
+   
+    </script> -->
+
+<!-- </div> -->
+ <h1>Promises</h1>
+ <!-- age should be more or equal then 18 eligible else not eligible -->
+  <!-- Promise Chaining -->
+<!-- <script>
+    const myPromise = new Promise(function(resolve,reject)
+    {
+       const age = 20;
+        if (age >= 18)
+        {
+           resolve("Eligible");
+        }
+        else
+        {
+           reject("Not-Eligible");
+        }
+    });
+    myPromise.then(function(result){
+        document.write(result);
+    }).catch(function(error){
+        document.write(error);
+    }).finally()
+</script> -->
+<!-- promise Chaining
+   .then(.....)
+   .then(.....)
+   .then(.....)
+   .catch(....) -->
+  
+  <script>
+function getData() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Data received Successfully");
+        }, 3000);
+    });
+}
+//   getData().then(function(data){console.log(data);});
+async function showData(){
+    try{
+    const data = await getData();
+    console.log(data);
+    }
+    catch
+    {
+        console.log("Error occurs")
+    }
+}
+ showData();
+
+// async function display() {
+//     return "Hello Display Call";
+// }
+// display().then(function(data){console.log(data);});
+// try{
+//     const result = asd;
+//     console.log(result);
+// }
+// catch{
+//     console.log("Error Handles");
+// }
+   </script>
+
+</body>
+</html>
